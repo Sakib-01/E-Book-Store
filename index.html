@@ -137,10 +137,11 @@
                 <input
                   id="search"
                   type="text"
-                  placeholder="Search Books"
+                  placeholder="Search Category"
                   class="input input-bordered input-primary w-full rounded-l-full text-blue-800"
                 />
                 <button
+                  id="btnSearch"
                   style="background-color: rgb(121, 125, 252)"
                   class="btn rounded-r-full input-bordered input-primary text-white"
                 >
@@ -183,9 +184,9 @@
 
           <div class="grid md:grid-cols-3 gap-6">
             <!-- Left section -->
-            <div class="col-span-2 space-y-6">
+            <div id="post-container" class="col-span-2 space-y-6">
               <!-- Discussion Card 1 -->
-              <div
+              <!-- <div
                 class="bg-white p-6 rounded-lg shadow-md border border-gray-200"
               >
                 <div class="flex items-start space-x-4">
@@ -222,7 +223,10 @@
                         >
                       </div>
                       <div>
-                        <button class="btn btn-ghost btn-circle">
+                        <button
+                          onclick="clickEvent()"
+                          class="btn btn-ghost btn-circle"
+                        >
                           <div
                             class="indicator border-2 rounded-full p-3 hover:bg-blue-700 hover:text-white"
                           >
@@ -233,23 +237,25 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
 
             <!-- Right section (Titles) -->
-            <div class="space-y-4">
+            <div id="mark-container" class="space-y-4">
               <div class="flex justify-between items-center mb-4">
                 <h4 class="font-bold text-gray-800">Title</h4>
-                <button class="text-sm text-gray-500">Mark as read (4)</button>
+                <div class="text-sm text-gray-500">
+                  Mark as read (<span id="mark-count">0</span>)
+                </div>
               </div>
-              <div
+              <!-- <div
                 class="bg-white p-4 rounded-lg shadow-md border border-gray-200"
               >
                 <div class="flex justify-between items-center gap-6">
                   <p>10 Kids Unaware of Their Halloween Costume</p>
                   <span class="text-gray-400">1,568</span>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -342,5 +348,6 @@
         </div>
       </section>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
