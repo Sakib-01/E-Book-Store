@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E Book</title>
+    <!-- tailwind and daisyUI  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind and daisyUI  -->
+  </head>
+  <body>
+    <header>
+      <div class="navbar bg-base-100 w-10/12 mx-auto my-5">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-3"
+            >
+              <li><i class="fa-solid fa-house">Home</i></li>
+              <li><i class="fa-solid fa-pen">ToolTip</i></li>
+              <li>
+                <i class="fa-solid fa-user-plus">Register</i>
+              </li>
+              <li><i class="fa-solid fa-flag">Section</i></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl">E-BOOK</a>
+        </div>
+
+        <div class="navbar-end flex gap-2">
+          <div class="md:flex gap-2 hidden">
+            <button class="btn btn-ghost btn-circle">
+              <div class="indicator border-2 rounded-full p-3">
+                <i class="fa-solid fa-house"></i>
+                <!-- <span
+                    class="badge badge-xs badge-primary indicator-item"
+                  ></span> -->
+              </div>
+            </button>
+            <button class="btn btn-ghost btn-circle">
+              <div class="indicator border-2 rounded-full p-3">
+                <i class="fa-solid fa-pen"></i>
+                <!-- <span
+                    class="badge badge-xs badge-primary indicator-item"
+                  ></span> -->
+              </div>
+            </button>
+            <button class="btn btn-ghost btn-circle">
+              <div class="indicator border-2 rounded-full p-3">
+                <i class="fa-solid fa-user-plus"></i>
+                <!-- <span
+                    class="badge badge-xs badge-primary indicator-item"
+                  ></span> -->
+              </div>
+            </button>
+            <button class="btn btn-ghost btn-circle">
+              <div class="indicator border-2 rounded-full p-3">
+                <i class="fa-solid fa-flag"></i>
+                <!-- <span
+                    class="badge badge-xs badge-primary indicator-item"
+                  ></span> -->
+              </div>
+            </button>
+          </div>
+
+          <button
+            style="background-color: rgb(121, 125, 252)"
+            class="btn rounded-3xl text-white"
+          >
+            Primary
+          </button>
+        </div>
+      </div>
+
+      <!-- banner section  -->
+
+      <section class="w-10/12 mx-auto h-[550px] rounded-2xl">
+        <div
+          class="hero h-full rounded-3xl bg-[url(https://kahedu.edu.in/n/wp-content/uploads/2021/05/Impact-Of-Reading-Books-On-Your-Mental-Health-990x500.jpg)] bg-cover bg-center"
+        >
+          >
+
+          <div
+            class="hero-content text-neutral-content text-center ml-auto mt-auto"
+          >
+            <div class="max-w-md mr-5 mt-5">
+              <h1 class="mb-5 text-5xl font-bold text-white">
+                Welcome to
+                <br />
+                <span
+                  style="color: rgb(121, 125, 252)"
+                  class="text-6xl font-bold"
+                  >E-Book </span
+                >Store
+              </h1>
+              <div class="w-full my-10 flex">
+                <input
+                  id="search"
+                  type="text"
+                  placeholder="Search Books"
+                  class="input input-bordered input-primary w-full rounded-l-full text-blue-800"
+                />
+                <button
+                  style="background-color: rgb(121, 125, 252)"
+                  class="btn rounded-r-full input-bordered input-primary text-white"
+                >
+                  Search
+                </button>
+              </div>
+              <div class="rounded-3xl w-72 bg-gray-500">
+                <div
+                  class="flex gap-10 p-10 text-blue-800 text-lg font-bold text-left"
+                >
+                  <div>
+                    <h2>Registered User</h2>
+                    <h2>Forum</h2>
+                    <h2>Topic</h2>
+                    <h2>Replies</h2>
+                  </div>
+                  <div>
+                    <h2>2</h2>
+                    <h2>5</h2>
+                    <h2>10</h2>
+                    <h2>5</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner section  -->
+    </header>
+
+    <main>
+      <section class="py-10">
+        <div class="w-10/12 mx-auto px-4">
+          <h1 class="text-3xl font-bold text-center mb-8">Let's Discuss</h1>
+          <p class="text-center text-gray-500 mb-10">
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Left section -->
+            <div class="col-span-2 space-y-6">
+              <!-- Discussion Card 1 -->
+              <div
+                class="bg-white p-6 rounded-lg shadow-md border border-gray-200"
+              >
+                <div class="flex items-start space-x-4">
+                  <div class="w-12 h-12 mt-1 flex mr-3">
+                    <img src="./images/icons8-eyes-94.png" alt="" />
+                    <span
+                      class="badge badge-xs badge-success indicator-item"
+                    ></span>
+                  </div>
+                  <div>
+                    <div class="flex gap-5">
+                      <p class="text-sm text-gray-500">Music</p>
+                      <p class="text-sm text-gray-500">Author: Awlad Hossain</p>
+                    </div>
+                    <h2 class="font-semibold text-lg">
+                      10 Kids Unaware of Their Halloween Costume
+                    </h2>
+                    <p class="text-sm text-gray-500 mt-2">
+                      It’s one thing to subject yourself to a Halloween costume
+                      mishap because, hey that’s your prerogative.
+                    </p>
+                    <div
+                      class="mt-4 flex justify-between items-center space-x-4 text-gray-400"
+                    >
+                      <div class="flex items-center gap-5">
+                        <span class="flex items-center space-x-1 gap-1"
+                          ><i class="fas fa-thumbs-up"></i> 560</span
+                        >
+                        <span class="flex items-center space-x-1 gap-1"
+                          ><i class="fas fa-comment"></i> 1,568</span
+                        >
+                        <span class="flex items-center space-x-1 gap-1"
+                          ><i class="fas fa-clock"></i> 5 min</span
+                        >
+                      </div>
+                      <div>
+                        <button class="btn btn-ghost btn-circle">
+                          <div
+                            class="indicator border-2 rounded-full p-3 hover:bg-blue-700 hover:text-white"
+                          >
+                            <i class="fa-solid fa-book-bookmark"></i>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right section (Titles) -->
+            <div class="space-y-4">
+              <div class="flex justify-between items-center mb-4">
+                <h4 class="font-bold text-gray-800">Title</h4>
+                <button class="text-sm text-gray-500">Mark as read (4)</button>
+              </div>
+              <div
+                class="bg-white p-4 rounded-lg shadow-md border border-gray-200"
+              >
+                <div class="flex justify-between items-center gap-6">
+                  <p>10 Kids Unaware of Their Halloween Costume</p>
+                  <span class="text-gray-400">1,568</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-10">
+        <div class="w-10/12 mx-auto px-4">
+          <h1 class="text-3xl font-bold text-center mb-8">Latest Posts</h1>
+          <p class="text-center text-gray-500 mb-10">
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Post 1 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-md border border-gray-200"
+            >
+              <div class="text-sm text-gray-500 mb-2">29 January 2024</div>
+              <h2 class="font-semibold text-lg">
+                What will a mars habitat force that impact in our daily life!!!
+              </h2>
+              <p class="text-gray-500 mt-2">
+                Yes, you can run unit tests and view the results directly within
+                the app.
+              </p>
+              <div class="flex items-center mt-4 space-x-2">
+                <img
+                  src="https://via.placeholder.com/40"
+                  class="w-10 h-10 rounded-full"
+                  alt="Avatar"
+                />
+                <div>
+                  <p class="text-sm font-medium">Cameron Williamson</p>
+                  <p class="text-xs text-gray-400">Unknown</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-md border border-gray-200"
+            >
+              <div class="text-sm text-gray-500 mb-2">No publish date</div>
+              <h2 class="font-semibold text-lg">
+                What will a mars habitat force that impact in our daily life!!!
+              </h2>
+              <p class="text-gray-500 mt-2">
+                Yes, you can run unit tests and view the results directly within
+                the app.
+              </p>
+              <div class="flex items-center mt-4 space-x-2">
+                <img
+                  src="https://via.placeholder.com/40"
+                  class="w-10 h-10 rounded-full"
+                  alt="Avatar"
+                />
+                <div>
+                  <p class="text-sm font-medium">Jerome Bell</p>
+                  <p class="text-xs text-gray-400">Unknown</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Post 3 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-md border border-gray-200"
+            >
+              <div class="text-sm text-gray-500 mb-2">29 January 2024</div>
+              <h2 class="font-semibold text-lg">
+                What will a mars habitat force that impact in our daily life!!!
+              </h2>
+              <p class="text-gray-500 mt-2">
+                Yes, you can run unit tests and view the results directly within
+                the app.
+              </p>
+              <div class="flex items-center mt-4 space-x-2">
+                <img
+                  src="https://via.placeholder.com/40"
+                  class="w-10 h-10 rounded-full"
+                  alt="Avatar"
+                />
+                <div>
+                  <p class="text-sm font-medium">Dianne Russell</p>
+                  <p class="text-xs text-gray-400">ROR Developer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
