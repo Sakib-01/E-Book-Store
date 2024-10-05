@@ -113,20 +113,29 @@ const latestPost = (data) => {
     const latestPostContent = document.createElement("div");
     latestPostContent.innerHTML = `
     <div
-                class="bg-white p-6 rounded-lg shadow-md border border-gray-200"
+                class="bg-white p-6 rounded-lg shadow-md border border-gray-200 h-full flex flex-col justify-evenly cursor-pointer"
               >
-                <div class="text-sm text-gray-500 mb-2">${
-                  element.posted_date == true
-                    ? `${element.posted_date}`
-                    : "No Publlish Date"
-                }</div>
+                <div class=" my-4 space-x-2 rounded-s-3xl">
+                  <img class="rounded-2xl mb-2"
+                    src="${element.cover_image}"
+                    class="w-full "
+                    alt="Avatar"
+                  />
+                  <div>
+
+                <div class="text-sm text-gray-500 my-2">${
+                  element.author.posted_date
+                    ? `${element.author.posted_date}`
+                    : " No Published Date"
+                }
+                </div>
                 <h2 class="font-semibold text-lg">
                   ${element.title}
                 </h2>
                 <p class="text-gray-500 mt-2">
                   ${element.description}
                 </p>
-                <div class="flex items-center mt-4 space-x-2">
+                <div class="flex items-center mt-4 space-x-2 ">
                   <img
                     src="${element.profile_image}"
                     class="w-10 h-10 rounded-full"
