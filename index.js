@@ -13,6 +13,14 @@ const searchPosts = async (id) => {
   const data = await res.json();
   loadPost(data.posts);
 };
+const recentPosts = async () => {
+  const res = await fetch(
+    "https://openapi.programming-hero.com/api/retro-forum/latest-posts"
+  );
+  const data = await res.json();
+  console.log(data);
+  latestPost(data);
+};
 
 const btnSearch = document.getElementById("btnSearch");
 btnSearch.addEventListener("click", function () {
@@ -98,4 +106,46 @@ const loadPost = (data) => {
   });
 };
 
+const latestPost = (data) => {
+  const latestPostContainer = document.getElementById("latest-post-container");
+  data.forEach((element) => {
+    console.log(element);
+    const latestPostContent = document.createElement("div");
+    latestPostContent.innerHTML = `
+    <div
+                class="bg-white p-6 rounded-lg shadow-md border border-gray-200"
+              >
+                <div class="text-sm text-gray-500 mb-2">${
+                  element.posted_date == true
+                    ? `${element.posted_date}`
+                    : "No Publlish Date"
+                }</div>
+                <h2 class="font-semibold text-lg">
+                  ${element.title}
+                </h2>
+                <p class="text-gray-500 mt-2">
+                  ${element.description}
+                </p>
+                <div class="flex items-center mt-4 space-x-2">
+                  <img
+                    src="${element.profile_image}"
+                    class="w-10 h-10 rounded-full"
+                    alt="Avatar"
+                  />
+                  <div>
+                    <p class="text-sm font-medium">${element.author.name}</p>
+                    <p class="text-xs text-gray-400">${
+                      element.author.designation == true
+                        ? `${element.author.designation}`
+                        : "Unknown"
+                    }</p>
+                  </div>
+                </div>
+              </div>
+    `;
+    latestPostContainer.appendChild(latestPostContent);
+  });
+};
+
 allPosts();
+recentPosts();
